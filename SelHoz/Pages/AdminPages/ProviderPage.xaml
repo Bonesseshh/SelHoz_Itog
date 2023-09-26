@@ -1,0 +1,79 @@
+﻿<Page x:Class="SelHoz.Pages.AdminPages.ProviderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:Provider_VM}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProviderPage">
+
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Right"
+           Width="150">
+            <Button
+                Background="LightGreen"
+                x:Name="btn1"
+                Width="150"
+                Height="50"
+                Margin="0 20 0 0"
+                Command="{Binding AddProv}" 
+                FontWeight="Bold"
+                FontSize="14">
+                <TextBlock TextAlignment="Center"> Добавить <LineBreak/> Поставщика </TextBlock>
+            </Button>
+            <Button
+                Background="LightGreen"
+                x:Name="btn2"
+                Width="150"
+                Height="50"
+                Margin="0 20 0 0"                              
+                Click="btn2_Click"
+                FontWeight="Bold"
+                FontSize="14">
+                <TextBlock TextAlignment="Center"> Сортировать <LineBreak/> по возрастанию</TextBlock>
+            </Button>
+            <Button
+                Background="LightGreen"
+                x:Name="btn3"
+                Width="150"
+                Height="50"
+                Margin="0 20 0 0"                              
+                Click="btn3_Click"
+                FontWeight="Bold"
+                FontSize="14">
+                <TextBlock TextAlignment="Center"> Сортировать <LineBreak/> по убыванию</TextBlock>
+            </Button>
+        </StackPanel>
+
+        <ListBox
+            Name="lbox1"
+            Background="White" Margin="10,24,166,49"
+            ItemsSource="{Binding Prov_List}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock 
+                           Text="{Binding Path=IdProvider}"                          
+                           Width="200"
+                           Margin="0 10 0 0"
+                           FontWeight="Bold"/>
+                        <TextBlock 
+                           Text="{Binding Path=NameProvider}"                          
+                           Width="200"
+                           FontWeight="Bold"/>
+                        <TextBlock 
+                           Text="{Binding Path=AddressProvider}"                          
+                           Width="200"
+                           FontWeight="Bold"/>
+                        <TextBlock 
+                           Text="{Binding Path=PhoneNumberProvider}"                          
+                           Width="200"
+                           FontWeight="Bold"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

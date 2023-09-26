@@ -1,0 +1,95 @@
+﻿<Window x:Class="SelHoz.Pages.AdminPages.AddFertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:AddFertVM}"
+        mc:Ignorable="d"
+        Title="Добавление удобрения" Height="450" Width="800">
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Width="500">
+            <TextBlock 
+                Width="200"
+                Height="20"              
+                Text="Название:"
+                FontWeight="Bold"
+                FontSize="18"/>
+            <TextBlock 
+                Width="200"
+                Height="10"/>
+            <TextBox
+                x:Name="tb1"
+                Width="200"
+                Height="30"
+                Text="{Binding NameFert}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="200"
+                Margin="0 10 0 0"
+                Height="20"              
+                Text="Описание:"
+                FontWeight="Bold"
+                FontSize="18"/>
+            <TextBox
+                x:Name="tb4"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text="{Binding Description}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="250"
+                Height="20"              
+                Text="Дата производства:"
+                FontWeight="Bold"
+                FontSize="18"/>
+            <DatePicker
+                x:Name="tb2"
+                Margin="0 10 0 0"
+                Width="200"
+                Height="50"
+                SelectedDate ="{Binding ManufactureDate}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="250"
+                Height="22"              
+                Text="Срок годности:"
+                FontWeight="Bold"
+                FontSize="18"/>
+            <DatePicker
+                x:Name="tb3"             
+                SelectedDateFormat="Short"   
+                Margin="0 10 0 0"
+                Width="200"
+                Height="50"                
+                SelectedDate="{Binding ExpirationDate}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="200"
+                Margin="0 10 0 0"
+                Height="20"              
+                Text="Цена:"
+                FontWeight="Bold"
+                FontSize="18"/>
+            <TextBox
+                x:Name="tb8"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text="{Binding PriceFert}"
+                Background="LightGreen"/>
+            <Button
+                Margin="0 20 0 0"
+                Width="200"
+                Height="30"
+                Content="Добавить"
+                Command="{Binding AddFert}"
+                FontWeight="Bold"
+                FontSize="20">
+
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,115 @@
+﻿<Window x:Class="SelHoz.Pages.AdminPages.AddFarmWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:AddFarmVM}"
+        mc:Ignorable="d"
+        Title="Добавление хозяйства" Height="600" Width="800">
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Width="500">
+            <TextBlock 
+                Width="212"
+                Height="30"              
+                Text="Название хозяйства:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb1"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text="{Binding NameFarm}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="181"
+                Height="30"              
+                Text="Адрес хозяйства:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb2"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text ="{Binding AddressFarm}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="114"
+                Height="30"              
+                Text="Сотрудник:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb3"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding IDEmployee}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="114"
+                Height="30"              
+                Text="Культура:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb4"                                          
+                Width="200"
+                Height="30"   
+                Margin="0 10 0 0"
+                Text="{Binding IDCulture}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="114"
+                Height="30"              
+                Text="Удобрение:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb5"                                          
+                Width="200"
+                Height="30"   
+                Margin="0 10 0 0"
+                Text="{Binding IDFert}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="114"
+                Height="30"              
+                Text="Техника:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb6"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding IDTech}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="139"
+                Height="30"              
+                Text="Сбор урожая:"
+                FontWeight="Bold"
+                FontSize="20"/>
+            <TextBox
+                x:Name="tb7"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding IDHarv}"
+                Background="LightGreen"/>
+            <Button
+                Width="200"
+                Height="50"
+                Margin="0 10 0 0"
+                Content="Добавить"
+                Command="{Binding AddFarm}"
+                FontWeight="Bold"
+                FontSize="24">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

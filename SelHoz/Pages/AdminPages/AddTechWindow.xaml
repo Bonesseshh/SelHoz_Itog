@@ -1,0 +1,78 @@
+﻿<Window x:Class="SelHoz.Pages.AdminPages.AddTechWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:AddTechVM}"
+        mc:Ignorable="d"
+        Title="Добавление техники" Height="450" Width="800">
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Width="500">
+            <TextBlock 
+                Width="242"
+                Height="30"              
+                Text="Название техники:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBlock 
+                Width="200"
+                Height="10"/>
+            <TextBox
+                x:Name="tb1"
+                Width="200"
+                Height="30"
+                Text="{Binding NameTech}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="244"
+                Height="30"              
+                Text="Описание техники: "
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb2"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="70"
+                Text ="{Binding Decriptione}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="244"
+                Height="30"              
+                Text="Модель:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb3"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding Model}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="244"
+                Height="30"              
+                Text="Цена:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb5"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding PriceTech}"
+                Background="LightGreen"/>
+            <Button
+                Width="200"
+                Height="50"
+                Margin="0 20 0 0"
+                Content="Добавить"
+                Command="{Binding AddTech}"
+                FontWeight="Bold"
+                FontSize="24">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

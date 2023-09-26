@@ -1,0 +1,105 @@
+﻿<Window x:Class="SelHoz.Pages.AdminPages.AddCultureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:AddCultureVM}"
+        mc:Ignorable="d"
+        Title="Добавление растения" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Width="307">
+            <TextBlock 
+                Width="250"
+                Height="40"              
+                Text="Название растения:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBlock 
+                Width="200"
+                Height="10"/>
+            <TextBox
+                x:Name="tb1"
+                Width="200"
+                Height="30"
+                Text="{Binding NameCulture}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="260"
+                 Margin="0 10 0 0"
+                Height="40"              
+                Text="Период созревания: "
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb2"
+                Margin="0 10 0 0"
+                Width="200"
+                Height="30"
+                Text ="{Binding Period}"
+                Background="LightGreen"/>
+            <Button
+                Width="200"
+                Height="50"
+                 Margin="0 170 0 0"
+                Content="Добавить"
+                Command="{Binding AddCulture}"
+                FontWeight="Bold"
+                FontSize="24"/>
+        </StackPanel>
+        <StackPanel 
+            HorizontalAlignment="Center"
+            Width="300" Grid.Column="1" Margin="0,-10,0,10">
+            <TextBlock 
+                Width="200"
+                Height="10"/>
+            <TextBlock 
+                Width="150"
+                Height="35"              
+                Text="Описание:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb3"       
+                Margin="0 10 0 0"
+                Width="200"
+                Height="70"                
+                Text="{Binding DescriptionCul}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="150"
+                Height="30"              
+                Text="Сезонность:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb4"  
+                Margin="0 10 0 0"
+                Width="200"
+                Height="30"                
+                Text="{Binding Seasonality}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="230"
+                Height="35"              
+                Text="Площадь посева:"
+                FontWeight="Bold"
+                Margin="0 10 0 0"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb5"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding IDarea}"
+                Background="LightGreen"/>
+        </StackPanel>
+    </Grid>
+</Window>

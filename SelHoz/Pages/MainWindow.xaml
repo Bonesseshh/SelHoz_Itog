@@ -1,0 +1,15 @@
+﻿<Window x:Class="SelHoz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz"
+        mc:Ignorable="d"
+        Title="Сельское хозяйство" Height="640" Width="1280">
+    <Grid>
+        <Frame
+            x:Name="MainFrame"
+            NavigationUIVisibility="Hidden"  Height="450" Margin="331,87,79,87"/>
+        <StackPanel HorizontalAlignment="Left" Width="240" Margin="28,29,0,32"/>
+    </Grid>
+</Window>

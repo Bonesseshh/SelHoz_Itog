@@ -1,0 +1,63 @@
+﻿<Window x:Class="SelHoz.Pages.AdminPages.AddProviderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelHoz.Pages.AdminPages" xmlns:VM="clr-namespace:SelHoz.VM.AdminVM" d:DataContext="{d:DesignInstance Type=VM:AddProviderVM}"
+        mc:Ignorable="d"
+        Title="Добавление поставщика" Height="450" Width="800">
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Width="500">
+            <TextBlock 
+                Width="250"
+                Height="30"              
+                Text="Имя поставщика"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb1"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text="{Binding NameProv}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="250"
+                Height="30"              
+                Text="Адрес поставщика:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb2"
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"
+                Text ="{Binding AddressProv}"
+                Background="LightGreen"/>
+            <TextBlock 
+                Width="250"
+                Height="30"              
+                Text="Номер телефона:"
+                FontWeight="Bold"
+                FontSize="26"/>
+            <TextBox
+                x:Name="tb3"                                          
+                Width="200"
+                Margin="0 10 0 0"
+                Height="30"                
+                Text="{Binding PhoneProv}"
+                Background="LightGreen"/>
+            <Button
+                Width="200"
+                Height="50"
+                Margin="0 20 0 0"
+                Content="Добавить"
+                Command="{Binding AddProv}"
+                FontWeight="Bold"
+                FontSize="24">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
